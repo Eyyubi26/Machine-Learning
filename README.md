@@ -10,7 +10,7 @@ Kargalar, avlarını bulmak için grup içinde işbirliği yaparlar ve bulduklar
 
 CSA, genel problemler için kullanılabilir ve özellikle karmaşık optimizasyon problemlerinde etkilidir. Algoritmanın performansı, problemin doğası ve çözüm alanının özelliklerine bağlı olarak değişebilir.
 
-# ------------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 # Crow Search Algorithm (CSA)
 
