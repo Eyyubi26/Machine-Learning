@@ -9,11 +9,11 @@ from keras.callbacks import CSVLogger
 data = pd.read_csv('dataset/path')
 
 # Girdi ve çıktı verilerini ayır / Separate input and output data
-X = data
+x = data
 y = data
 
 # Verileri eğitim ve test setlerine ayır / Separate data into training and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
 n_steps = 15  # Örnek başına zaman adımlarının sayısı / Number of time steps per sample
 n_features = 1  # Her bir zaman adımındaki özellik sayısı / Number of features in each time step
@@ -27,8 +27,8 @@ model.compile(optimizer='adam', loss='mse')
 csv_logger = CSVLogger('Logs/TrainLogs.csv', append=True)
 
 # Modeli eğit / Train model
-model.fit(X_train, y_train, epochs=100, verbose=1, callbacks=[csv_logger])
+model.fit(x_train, y_train, epochs=100, verbose=1, callbacks=[csv_logger])
 
 # Modeli değerlendir / Evaluate model
-loss = model.evaluate(X_test, y_test)
+loss = model.evaluate(x_test, y_test)
 print('Test Loss:', loss)
